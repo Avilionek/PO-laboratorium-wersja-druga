@@ -14,7 +14,6 @@ from django.urls import reverse
 from django.views import generic
 
 
-
 def harddrive(request):
     harddrive_list = HardDrive.objects.all
     template = loader.get_template('Shop/harddrive.html')
@@ -23,6 +22,7 @@ def harddrive(request):
     }
     return HttpResponse(template.render(context, request))
 
+
 def pc(request):
     pc_list = PC.objects.all
     template = loader.get_template('Shop/pc.html')
@@ -30,6 +30,7 @@ def pc(request):
         'pc_list': pc_list,
     }
     return HttpResponse(template.render(context, request))
+
 
 def design(request):
     design_list = Design.objects.all
@@ -44,7 +45,6 @@ def graphicscard(request):
     graphicscard_list = GraphicsCard.objects.all
     template = loader.get_template('Shop/graphicscard.html')
     context = {
-        'design_list': graphicscard_list,
+        'graphicscard_list': graphicscard_list,
     }
     return HttpResponse(template.render(context, request))
-

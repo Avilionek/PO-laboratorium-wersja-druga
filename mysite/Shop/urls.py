@@ -8,5 +8,4 @@ urlpatterns = [
     path('harddrive/', views.harddrive, name='harddrive'),
     path('design/', views.design, name='design'),
     path('graphicscard/', views.graphicscard, name='graphicscard'),
-    path('components/', views, name='components'),
 ]
