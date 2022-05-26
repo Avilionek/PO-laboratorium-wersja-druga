@@ -1,3 +1,8 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'Shop/style.css' %}">
+
+
 {% if pc_list %}
 <ul>
     {% for pc in pc_list %}

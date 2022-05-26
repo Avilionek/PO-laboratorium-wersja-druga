@@ -1,3 +1,7 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'Shop/style.css' %}">
+
 {% if harddrive_list %}
 <ul>
     {% for harddrive in harddrive_list %}

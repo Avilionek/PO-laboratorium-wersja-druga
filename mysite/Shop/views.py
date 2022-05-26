@@ -7,7 +7,6 @@ from .models import PC
 from .models import HardDrive
 from .models import Design
 from .models import GraphicsCard
-
 from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
