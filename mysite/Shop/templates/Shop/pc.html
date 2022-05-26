@@ -1,0 +1,9 @@
+{% if pc_list %}
+<ul>
+    {% for pc in pc_list %}
+    <li><a href="/Shop/{{ PC.id }}/">{{ pc.pc_name }}</a></li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No Pc's are available.</p>
+{% endif %}

@@ -26,7 +26,6 @@ class PC(models.Model):
     design = models.ForeignKey(Design, on_delete=models.CASCADE)
     drive = models.ManyToManyField(HardDrive)
     card = models.ManyToManyField(GraphicsCard)
-
     pc_name = models.CharField(max_length=250)
     model = models.CharField(max_length=250)
 

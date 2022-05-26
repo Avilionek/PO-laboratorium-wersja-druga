@@ -1,0 +1,9 @@
+{% if graphicscard_list %}
+<ul>
+    {% for graphicscard in graphicscard_list %}
+    <li><a href="/Shop/{{ GraphicsCard.id }}/">{{ graphicscard.card_name }}</a></li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No Graphicscards are available.</p>
+{% endif %}

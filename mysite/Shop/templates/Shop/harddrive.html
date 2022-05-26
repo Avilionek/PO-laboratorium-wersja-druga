@@ -1,0 +1,9 @@
+{% if harddrive_list %}
+<ul>
+    {% for harddrive in harddrive_list %}
+    <li><a href="/Shop/{{ HardDrive.id }}/">{{ harddrive.kind_name }}</a></li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No hard drives are available.</p>
+{% endif %}

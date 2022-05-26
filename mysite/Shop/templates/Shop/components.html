@@ -1,0 +1,14 @@
+{% if pc_lsit %}
+
+<ul>
+    {% for pc in pc_list}
+    <li>{{ pc.kind_name }}</li>
+    <li>{{ pc.design_name }}</li>
+    <li>{{ pc..card_name }}</li>
+
+    <br>
+    {% endfor}
+</ul>
+{% else %}
+    <p>There are not available computers</p>
+{% endif %}
