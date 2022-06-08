@@ -1,13 +1,18 @@
-{% load static %}
+{% extends 'Shop/base.html' %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'Shop/style.css' %}">
+{% block content %}
+    <center>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'Shop/style.css' %}">
 
-{% if harddrive_list %}
-<ul>
-    {% for harddrive in harddrive_list %}
-    <li><a href="/Shop/{{ HardDrive.id }}/">{{ harddrive.kind_name }}</a></li>
-    {% endfor %}
-</ul>
-{% else %}
-<p>No hard drives are available.</p>
-{% endif %}
+        {% if harddrive_list %}
+        <ul style="list-style: none;">
+            {% for harddrive in harddrive_list %}
+            <li><a href="/Shop/{{ HardDrive.id }}/">{{ harddrive.kind_name }}</a></li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>No hard drives are available.</p>
+        {% endif %}
+    </center>
+{% endblock %}

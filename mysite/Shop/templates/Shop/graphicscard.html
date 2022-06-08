@@ -1,14 +1,22 @@
-{% load static %}
+{% extends 'Shop/base.html' %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'Shop/style.css' %}">
+{% block content %}
+
+<center>
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'Shop/style.css' %}">
 
 
-{% if graphicscard_list %}
-<ul>
-    {% for graphicscard in graphicscard_list %}
-    <li><a href="/Shop/{{ GraphicsCard.id }}/">{{ graphicscard.card_name }}</a></li>
-    {% endfor %}
-</ul>
-{% else %}
-<p>No Graphicscards are available.</p>
-{% endif %}
+    {% if graphicscard_list %}
+    <ul style="list-style: none;">
+        {% for graphicscard in graphicscard_list %}
+        <li><a href="/Shop/{{ GraphicsCard.id }}/">{{ graphicscard.card_name }}</a></li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No Graphicscards are available.</p>
+    {% endif %}
+</center>
+
+{% endblock %}

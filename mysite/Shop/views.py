@@ -13,6 +13,7 @@ from django.urls import reverse
 from django.views import generic
 
 
+
 def harddrive(request):
     harddrive_list = HardDrive.objects.all
     template = loader.get_template('Shop/harddrive.html')

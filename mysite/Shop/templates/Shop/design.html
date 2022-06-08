@@ -1,13 +1,19 @@
-{% load static %}
+{% extends 'Shop/base.html' %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'Shop/style.css' %}">
+{% block content %}
+    <center>
+    {% load static %}
 
-{% if design_list %}
-<ul>
-    {% for design in design_list %}
-    <li><a href="/Shop/{{ Design.id }}/">{{ design.design_name }}</a></li>
-    {% endfor %}
-</ul>
-{% else %}
-<p>No design are available.</p>
-{% endif %}
+    <link rel="stylesheet" type="text/css" href="{% static 'Shop/style.css' %}">
+
+    {% if design_list %}
+    <ul style="list-style: none;">
+        {% for design in design_list %}
+        <li><a href="/Shop/{{ Design.id }}/">{{ design.design_name }}</a></li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No design are available.</p>
+    {% endif %}
+    </center>
+{% endblock %}
