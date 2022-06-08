@@ -8,7 +8,7 @@
     {% if design_list %}
     <ul style="list-style: none;">
         {% for design in design_list %}
-        <li><a style="color: white;" href="/Shop/{{ Design.id }}/">{{ design.design_name }}</a></li>
+        <li style="color: white;">{{ design.design_name }}</li>
         {% endfor %}
     </ul>
     {% else %}

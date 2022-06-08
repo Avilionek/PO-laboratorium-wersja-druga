@@ -10,7 +10,7 @@
     {% if graphicscard_list %}
     <ul style="list-style: none;">
         {% for graphicscard in graphicscard_list %}
-        <li><a style="color: white;" href="/Shop/{{ GraphicsCard.id }}/">{{ graphicscard.card_name }}</a></li>
+        <li style="color: white;"> {{ graphicscard.card_name }}</li>
         {% endfor %}
     </ul>
     {% else %}
