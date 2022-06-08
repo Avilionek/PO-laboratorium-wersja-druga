@@ -1,10 +1,49 @@
-HEADER STUFF
-<br /><br />
+<!DOCTYPE html>
+<html>
 
+<head>
+    <style>
 
-{% block content %}
+        .topnav {
+            background-color: #333;
+            overflow: hidden;
+        }
 
-{% endblock %}
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
 
-<br /><br />
-FOOTER STUFF
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav a.active {
+            background-color: #550575;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="topnav">
+        <a class="active" href="/Shop/">Shop</a>
+        <a href="/Shop/design/">Design</a>
+        <a href="/Shop/harddrive/">Harddrives</a>
+        <a href="/Shop/graphicscard/">Graphicscard</a>
+        <a href="/Shop/pcform/">Create your own PC</a>
+    </div>
+
+    {% block content %}
+
+    {% endblock %}
+
+</body>
+
+</html>

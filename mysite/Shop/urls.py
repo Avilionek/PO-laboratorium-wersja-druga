@@ -9,5 +9,4 @@ urlpatterns = [
     path('design/', views.design, name='design'),
     path('graphicscard/', views.graphicscard, name='graphicscard'),
     path('pcform/', views.pcform, name='pcform')
-
 ]
