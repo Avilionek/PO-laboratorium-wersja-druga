@@ -1,0 +1,17 @@
+
+{% extends 'Shop/base.html' %}
+
+{% block content %}
+    <center>
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'Shop/style.css' %}">
+    <h1 style="color: white">Create your own computer</h1>
+
+    <form method="POST"> {%csrf_token %}
+        {{form.as_p}}
+        <input type = 'Submit' value='Save'/>
+    </form>
+
+    </center>
+{% endblock %}

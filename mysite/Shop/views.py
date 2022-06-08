@@ -11,6 +11,8 @@ from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 from django.views import generic
+from Shop.forms import pcForm
+
 
 
 
@@ -48,3 +50,12 @@ def graphicscard(request):
         'graphicscard_list': graphicscard_list,
     }
     return HttpResponse(template.render(context, request))
+
+def pcform(request):
+    form = pcForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+    context = {
+        'form':form
+    }
+    return render(request, 'Shop/forms.html', context)
