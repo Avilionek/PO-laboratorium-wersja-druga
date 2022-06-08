@@ -5,13 +5,12 @@
 <center>
     {% load static %}
 
-    <link rel="stylesheet" type="text/css" href="{% static 'Shop/style.css' %}">
 
 
     {% if graphicscard_list %}
     <ul style="list-style: none;">
         {% for graphicscard in graphicscard_list %}
-        <li><a href="/Shop/{{ GraphicsCard.id }}/">{{ graphicscard.card_name }}</a></li>
+        <li><a style="color: white;" href="/Shop/{{ GraphicsCard.id }}/">{{ graphicscard.card_name }}</a></li>
         {% endfor %}
     </ul>
     {% else %}
