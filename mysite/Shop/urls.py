@@ -1,4 +1,5 @@
 
+from unicodedata import name
 from django.urls import path
 from .import views
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
@@ -10,6 +11,7 @@ urlpatterns = [
     path('design/', views.design, name='design'),
     path('graphicscard/', views.graphicscard, name='graphicscard'),
     path('pcform/', views.pcform, name='pcform')
+    
 ]
 
 urlpatterns += staticfiles_urlpatterns()
