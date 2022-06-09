@@ -31,6 +31,6 @@ class PC(models.Model):
     model = models.CharField(max_length=250)
 
     def __str__(self):
-        return self.pc_name + '-' + self.model
+        return '{}{}{}'.format(self.pc_name, self.model, self.design)
 
 
